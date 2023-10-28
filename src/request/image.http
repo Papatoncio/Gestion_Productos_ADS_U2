@@ -1,0 +1,36 @@
+###Obtener todas las imagenes
+GET http://localhost:4000/api/image
+
+###Obtener todas imagenes de un producto
+GET http://localhost:4000/api/image/one
+Content-Type: application/json
+
+{
+    "claveProducto":"Producto1"
+}
+
+###Insertar imagenes
+POST http://localhost:4000/api/image
+Content-Type: application/json
+
+{
+    "claveProducto":"The great atractor",
+    "imgB64":["Imagen1","Imagen2","Imagen3"]
+}
+
+###Eliminar imagenes
+DELETE http://localhost:4000/api/image
+Content-Type: application/json
+
+{
+    "claveProducto":"Producto1"
+}
+
+###Actualizar imagenes
+PUT http://localhost:4000/api/image
+Content-Type: application/json
+
+{
+    "claveProducto":"Producto1",
+    "imgB64":["Imagen4","Imagen5","Imagen6"]
+}

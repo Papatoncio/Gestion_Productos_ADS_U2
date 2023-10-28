@@ -1,0 +1,31 @@
+###Obtener todos los productos
+GET http://localhost:4000/api/producto/obtener
+Content-Type: application/json
+
+{
+    "accion":1,
+    "filtro":{
+  "id_categoria": 2
+}
+}
+
+###Gestionar productos
+GET http://localhost:4000/api/producto/gestionar
+Content-Type: application/json
+
+{
+    "accion":1,
+    "producto":{
+  "clave": "P4001",
+  "nombre": "Portátil de Alto Rendimiento",
+  "precio": 1299.99,
+  "descripcion": "Portátil con procesador potente y gráficos de alta calidad.",
+  "stock": 50,
+  "fecha_alta": "2023-10-26T12:00:00Z",
+  "fecha_modificacion": "2023-10-28T12:00:00Z",
+  "baja_logica": false,
+  "marca": "MarcaD",
+  "id_categoria": 2,
+  "id_usuario": 1
+}
+}
