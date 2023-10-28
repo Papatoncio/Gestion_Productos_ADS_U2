@@ -6,6 +6,7 @@ import cors from "cors";
 //Importación de rutas para cada colección de la base de datos
 import Image from "./routes/image.routes";
 import Producto from "./routes/producto.routes";
+import Categoria from "./routes/categoria.routes";
 
 const app = express(); //Definición de constante para configurar la aplicación
 
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/image', Image); //Ruta para acceder a image
 app.use('/api/producto', Producto); //Ruta para acceder a producto
+app.use('/api/categoria', Categoria); //Ruta para acceder a producto
 
 //Exportación de la configuración
 export default app

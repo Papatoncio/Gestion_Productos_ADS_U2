@@ -1,16 +1,16 @@
 ###Obtener todos los productos
-GET http://localhost:4000/api/producto/obtener
+POST http://localhost:4000/api/producto/obtener
 Content-Type: application/json
 
 {
-    "accion":1,
+    "accion":2,
     "filtro":{
   "id_categoria": 2
 }
 }
 
 ###Gestionar productos
-GET http://localhost:4000/api/producto/gestionar
+POST http://localhost:4000/api/producto/gestionar
 Content-Type: application/json
 
 {

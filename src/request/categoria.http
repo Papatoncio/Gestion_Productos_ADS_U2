@@ -1,0 +1,24 @@
+###Obtener todas las categorias
+POST http://localhost:4000/api/categoria/obtener
+Content-Type: application/json
+
+{
+    "accion":2,
+    "filtro":{
+  "clave": "CATROPA"
+}
+}
+
+###Gestionar categorias
+POST http://localhost:4000/api/categoria/gestionar
+Content-Type: application/json
+
+{
+    "accion":1,
+    "categoria":{
+  "nombre": "Jardineria",
+  "clave": "CATJARDI",
+  "descripcion": "Articulos para jardineria.",
+  "fecha_alta": "2023-10-26T12:00:00Z"
+}
+}
