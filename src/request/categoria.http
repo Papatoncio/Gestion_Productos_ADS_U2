@@ -1,16 +1,27 @@
 ###Obtener todas las categorias
-POST http://localhost:4000/api/categoria/obtener
+POST http://localhost:3000/api/categoria/obtener
 Content-Type: application/json
 
 {
-    "accion":2,
+    "accion":1,
+    "filtro":{
+  "clave": "CATROPA"
+}
+}
+
+###Obtener todas las categorias
+POST https://productosbacktorres.fly.dev/api/categoria/obtener
+Content-Type: application/json
+
+{
+    "accion":1,
     "filtro":{
   "clave": "CATROPA"
 }
 }
 
 ###Gestionar categorias
-POST http://localhost:4000/api/categoria/gestionar
+POST http://localhost:3000/api/categoria/gestionar
 Content-Type: application/json
 
 {

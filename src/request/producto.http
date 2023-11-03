@@ -1,5 +1,5 @@
 ###Obtener todos los productos
-POST http://localhost:4000/api/producto/obtener
+POST http://localhost:3000/api/producto/obtener
 Content-Type: application/json
 
 {
@@ -9,14 +9,26 @@ Content-Type: application/json
 }
 }
 
+
+###Obtener todos los productos
+POST https://productosbacktorres.fly.dev/api/producto/obtener
+Content-Type: application/json
+
+{
+    "accion":2,
+    "filtro":{
+  "id_cliente": 7
+}
+}
+
 ###Gestionar productos
-POST http://localhost:4000/api/producto/gestionar
+POST https://productosbacktorres.fly.dev/api/producto/gestionar
 Content-Type: application/json
 
 {
     "accion":1,
     "producto":{
-  "clave": "P4001",
+  "clave": "P465001",
   "nombre": "Portátil de Alto Rendimiento",
   "precio": 1299.99,
   "descripcion": "Portátil con procesador potente y gráficos de alta calidad.",
@@ -25,7 +37,7 @@ Content-Type: application/json
   "fecha_modificacion": "2023-10-28T12:00:00Z",
   "baja_logica": false,
   "marca": "MarcaD",
-  "id_categoria": 2,
+  "id_categoria": [2],
   "id_usuario": 1
 }
 }

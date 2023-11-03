@@ -1,16 +1,24 @@
 ###Obtener todas las imagenes
-GET http://localhost:4000/api/image
+GET http://localhost:3000/api/image
 
 ###Obtener todas imagenes de un producto
-GET http://localhost:4000/api/image/one
+GET http://localhost:3000/api/image/producto
 Content-Type: application/json
 
 {
-    "claveProducto":"Producto1"
+    "claveProducto":"PROD003"
+}
+
+###Obtener todas imagenes de un producto
+POST https://productosbacktorres.fly.dev/api/image/producto
+Content-Type: application/json
+
+{
+    "claveProducto":"PROD003"
 }
 
 ###Insertar imagenes
-POST http://localhost:4000/api/image
+POST http://localhost:3000/api/image
 Content-Type: application/json
 
 {
@@ -19,7 +27,7 @@ Content-Type: application/json
 }
 
 ###Eliminar imagenes
-DELETE http://localhost:4000/api/image
+DELETE http://localhost:3000/api/image
 Content-Type: application/json
 
 {
@@ -27,7 +35,7 @@ Content-Type: application/json
 }
 
 ###Actualizar imagenes
-PUT http://localhost:4000/api/image
+PUT http://localhost:3000/api/image
 Content-Type: application/json
 
 {

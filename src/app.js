@@ -11,10 +11,10 @@ import Categoria from "./routes/categoria.routes";
 const app = express(); //Definición de constante para configurar la aplicación
 
 //Definición de puerto en el que va a correr el servidor
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 
 //Uso de modulos npm (express, morgan, cors)
-app.use(express.json()); //Definir uso de json en express
+app.use(express.json({ limit: '50mb' })); //Definir uso de json en express
 app.use(morgan('dev')); //Definir dev con morgan
 app.use(cors()); //Definir uso de cors
 

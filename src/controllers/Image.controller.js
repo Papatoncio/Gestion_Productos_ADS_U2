@@ -31,7 +31,7 @@ export const insertImages = async (req, res) => {
     });
 
     // Guarda las imagenes
-    const imageSaved = await newImages.save();
+    const imageSaved = await Image.insertMany(newImages);
 
     res.json({ message: "Imagenes insertadas", object: imageSaved });
 }
