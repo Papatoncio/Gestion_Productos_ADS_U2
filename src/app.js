@@ -14,7 +14,7 @@ const app = express(); //Definición de constante para configurar la aplicación
 app.set('port', process.env.PORT || 3000);
 
 //Uso de modulos npm (express, morgan, cors)
-app.use(express.json({ limit: '50mb' })); //Definir uso de json en express
+app.use(express.json({ limit: '1000mb' })); //Definir uso de json en express
 app.use(morgan('dev')); //Definir dev con morgan
 app.use(cors()); //Definir uso de cors
 
