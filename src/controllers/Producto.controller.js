@@ -22,4 +22,15 @@ export const gestionarProductos = (request, response) => {
         }
         response.status(200).json(results.rows);
     });
+
+    const id_producto = pool.query('SELECT id_producto FROM producto WHERE clave = $1', [producto.clave]);
+
+    for (let id_categoria of producto.id_categoria) {
+        pool.query('INSERT INTO productocategoria(id_producto, id_categoria) VALUES($1, $2)', [id_producto, id_categoria], (error, results) => {
+            if (error) {
+                throw error;
+            }
+            response.status(200).json(results.rows);
+        });
+    }
 }
